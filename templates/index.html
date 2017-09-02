@@ -1,8 +1,4 @@
-<!-- the extends syntax below is how we "template" in the header file to be visible on this page. This means that every time 
-we update the header.html file, this page will dynamically receive that update too. Magic! --> 
-{% extends "header.html" %} {% block body %}
-<!-- the form below is from Clarity's login UI example. It can be customized with CSS as needed; but functions pretty well on its own. You'll
-notice we reference "if" the user is actually logged in to display some text. If/Thens are easy in python/flask -->
+ {% extends "header.html" %} {% block body %}
 <div class="login-wrapper">
     <form class="login" id="loginform", method="POST">
         <label class="title">
@@ -18,10 +14,6 @@ notice we reference "if" the user is actually logged in to display some text. If
             <h3 class="welcome">ClarityUI and Python Example</h3>
             Using Python and Flask
         </label>
-
-
-        <!-- Below represents how we catch the variables that are entered into the form. In app.py we store these values and we're able to
-        feed them into other functions if we want--> 
         <div class="login-group">
             {%if session['logged_in']==True%}
             <input class="username" type="text" name="username" placeholder="Username" disabled>
