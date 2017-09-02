@@ -1,3 +1,5 @@
+<h1>ClarityUI - Python Flask Example</h1>
+
 This is a simple example of creating a Python Flask WebApp using Clarity UI 
 
 There are a couple features in this page
