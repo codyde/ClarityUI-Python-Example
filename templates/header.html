@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Ths document functions as the header of the page only. Its a template file, so if you include this on the top of your page 
+    using {{ extends header.html}} it will always be included. Directly below this comment, you'll see some code that brings 
+in all of our jss and css files that import clarity UI's design structure in. These files js_all and css_all are defined in the app.py file 
+which starts our application. We bundle all of these design elements together to bring into our project. -->
+
+Read more: http://html.com/tags/comment-tag/#ixzz4rYh7FV3p
+{% assets "js_all" %}
+<script type="text/javascript" src="{{ ASSET_URL }}"></script>
+{% endassets %} {% assets "css_all" %}
+<link rel=stylesheet type="text/css" href="{{ ASSET_URL }}"> {% endassets %}
+<style>
+    header .branding {
+        display: flex;
+        align-items: center;
+    }
+</style>
+<html lang="en">
+
+<head>
+    <title>
+        Python-Flask Clarity Example
+    </title>
+</head>
+
+<header class="header-6">
+    <div class="branding">
+        <clr-icon shape="vm"></clr-icon>
+        <span class="title">Py-Clarity</span>
+    </div>
+    <!-- This is where our navigation bar is built; configure your application routes in app.py and then build each one of these
+    to point at the location you are trying to get to. These should correspond to each @app.route in the app.py file.  -->
+    <div class="header-nav">
+            <a href="/" class="nav-link nav-text">Home</a>
+            <a href="/vms" class="nav-link nav-text">VM List</a>
+            <a href="/workflows" class="nav-link nav-text">vRO Workflow List</a>
+    </div>
+</header>
+<body>
+</body>
+</html>

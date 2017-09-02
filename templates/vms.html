@@ -1,0 +1,24 @@
+{% extends "header.html" %} {% block body %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>VM Name</th>
+            <th>CPU</th>
+            <th>Memory</th>
+            <th>ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- We create a for each loop here. For every item in the vms variable, we dump it into a table row. We create the vms variable
+        in app.py -->
+        {% for i in vms %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.cpu_count}}</td>
+            <td>{{i.memory_size_MiB}}</td>
+            <td>{{i.vm}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

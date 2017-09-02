@@ -1,0 +1,18 @@
+{% extends "header.html" %} {% block body %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>vRO Workflow Name</th>
+            <th>Item HREF</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in flows %}
+        <tr>
+            <td>{{i['attributes'][3]['value']}}</td>
+            <td>{{i['attributes'][0]['value']}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
